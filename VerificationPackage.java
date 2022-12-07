@@ -1,4 +1,5 @@
 import java.sql.SQLException;
+
 public class verif_Pack {
 	public void verif(Universite univ,Etudiant stud)throws SQLException	 {
 	if (univ.getPack() == TypePackage.Standard)
@@ -9,6 +10,5 @@ public class verif_Pack {
     {
    	 stud.setNbLivreMensuel_Autorise(10*2);
     }
-
 	}
 }
