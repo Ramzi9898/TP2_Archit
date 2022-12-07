@@ -1,7 +1,7 @@
+package view;
 import java.awt.FlowLayout;
 import java.awt.event.ActionListener;
 import javax.swing.*;
-
 public class ViewInscription extends JFrame {
 	private JLabel Matricule = new JLabel("Matricule");
 	    private JTextField matricule  = new JTextField(30);
@@ -18,6 +18,7 @@ public class ViewInscription extends JFrame {
 	    private JButton insert = new JButton("inscription");
 
 	    ViewInscription(){
+	    public ViewInscription(){
 	    	JPanel insertPanel = new JPanel();
 	    	this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	    	this.setSize(600, 600);
@@ -51,41 +52,34 @@ public class ViewInscription extends JFrame {
 	    	insertPanel.add(insert);
 	    	this.add(insertPanel);  	
 	    }
-
 		public int getMatricule() {
 			return Integer.parseInt(matricule.getText());
 		}
-
 		public String getNom() {
 			return nom.getText();
 		}
-
 		public String getPrenom() {
 			return prenom.getText();
 		}
-
 		public String getEmail() {
 			return email.getText();
 		}
-
 		public String getPwd() {
 			return pwd.getText();
 		}
-
 		public int getId_univ() {
 			return Integer.parseInt(id_univ.getText());
 		}
 
 		 void addInsertListener(ActionListener listenForInsertButton){
+		 public void addInsertListener(ActionListener listenForInsertButton){
 
 			         insert.addActionListener(listenForInsertButton);
 
 			     }			 
 			     void displayErrorMessage(String errorMessage){
-
-
+			 
+			   
 			         JOptionPane.showMessageDialog(this, errorMessage);      
 			    }
-
-
 }
